@@ -10,7 +10,6 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_TOKEN,
 });
 
-
 const openai = new OpenAIApi(configuration);
 
 const systemPrompt = {
@@ -75,9 +74,9 @@ router.post('/', async function(req, res, next) {
   let chatCompletion;
   try {
     chatCompletion = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo-16k",
+      model: "gpt-3.5-turbo",
       messages: history,
-      max_tokens: 15900 - getTokenizedHistoryLength(history),
+      max_tokens: 4000 - getTokenizedHistoryLength(history),
       temperature: 0.8,
       top_p: 1,
       stream: true,
