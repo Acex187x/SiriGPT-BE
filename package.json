@@ -9,6 +9,7 @@
   "dependencies": {
     "@kvs/env": "^2.1.5",
     "cookie-parser": "~1.4.4",
+    "cookie-session": "^2.0.0",
     "crypto": "^1.0.1",
     "debug": "~2.6.9",
     "dotenv": "^16.3.1",
