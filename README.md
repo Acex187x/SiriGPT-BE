@@ -26,3 +26,6 @@ While other attempts to create Siri Shortcuts for GPT-3 are using OpenAI API dir
 
 ## Roadmap
 - [ ] Add ability to make more than one message in conversation.
+- [ ] Integration with [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT)
+- [ ] Integration with HomeKit
+- [ ] Persobality Switcher (see my openai-grammy-bot repo)
