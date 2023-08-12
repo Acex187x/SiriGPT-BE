@@ -17,6 +17,10 @@ const systemPrompt = {
   content: `Act as a voice assistant named Siri-GTP.`
 }
 
+router.get('/', async function(req, res, next) {
+    res.send("OK!");
+})
+
 /* GET home page. */
 router.post('/', async function(req, res, next) {
 
