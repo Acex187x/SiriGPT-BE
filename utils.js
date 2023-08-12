@@ -1,5 +1,5 @@
-const {DB_NAME} = require("./constants");
-const { kvsEnvStorage } = require('@kvs/env');
+const Tokenizer = require('gpt3-tokenizer').default;
+const tokenizer = new Tokenizer({ type: 'gpt3' });
 
 class KeyValueStore {
     constructor() {
@@ -48,4 +48,14 @@ exports.validTrim = (str) => {
     }
 
     return string.substring(0, lastSpaceIndex).trim()
+}
+
+exports.getTokenizedHistoryLength = (history) => {
+    let length = 0;
+
+    for (const message of history) {
+        length += tokenizer.encode(message.content).bpe.length;
+    }
+
+    return length;
 }

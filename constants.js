@@ -1,1 +1,0 @@
-exports.DB_NAME = "sirigpt-state";
