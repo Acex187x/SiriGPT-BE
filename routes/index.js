@@ -107,6 +107,7 @@ router.post('/', async function(req, res, next) {
   }
 
   chatCompletion.data.on('data', async data => {
+    console.log("data", data.toString())
     const state = getStorage(sessionId);
 
     const lines = data.toString().split('\n').filter(line => line.trim() !== '');
